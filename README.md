@@ -1,59 +1,130 @@
-# Land Price Predictor on Area
+# 🏡 Land Price Predictor using Machine Learning
 
-This is a Streamlit-based machine learning app that predicts land prices based on area using a simple linear regression model.
+A Streamlit-based Machine Learning web application that predicts land prices based on area using a **Linear Regression Model**.
 
-## 🔧 Technologies Used
-- Python
-- Pandas
-- Scikit-learn
-- Matplotlib
-- Streamlit
+---
 
-## 🚀 How to Run
+## 📌 Features
 
-1. Clone the repository or download the files
-2. Install required libraries:(pip install -r requirements.txt)
-3. Run the app:(streamlit run app.py)
+* Predict land price instantly
+* Dynamic regression graph visualization
+* Interactive Streamlit web interface
+* Save predictions to dataset
+* Visualize training data and prediction points
 
- Files Included
-- `app.py`: Streamlit app
-- `area.pkl`: Trained regression model
-- `requirements.txt`: Python dependencies
+---
 
+## 🛠️ Technologies Used
 
-REGRESSION PLOT PNG
-%matplotlib inline
-import pickle
-import pandas as pd
-import matplotlib.pyplot as plt
+* Python
+* Streamlit
+* Scikit-learn
+* Pandas
+* NumPy
+* Matplotlib
 
-# Load trained model
-with open('area.pkl', 'rb') as f:
-    model = pickle.load(f)
+---
 
-# Actual dataset
-data = {
-    'area': [2600, 3000, 3200, 3600, 4000],
-    'price': [550000, 565000, 610000, 680000, 725000]
-}
-df = pd.DataFrame(data)
+## 📂 Project Structure
 
-# Predict
-X = df[['area']]
-y_pred = model.predict(X)
+```bash
+land-price-regression-model/
+│
+├── myfile.py            # Main Streamlit application
+├── area.pkl             # Trained Linear Regression model
+├── data.csv             # Dataset storage
+├── requirements.txt     # Required libraries
+├── README.md            # Project documentation
+```
 
-# Plot
-plt.scatter(df['area'], df['price'], color='blue', label='Actual Data')
-plt.plot(df['area'], y_pred, color='red', label='Regression Line')
+---
 
-plt.xlabel("Area (sq.ft)")
-plt.ylabel("Price (INR)")
-plt.title("Land Area vs Price - Regression Plot")
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plt.savefig("regression_plot.png")  # Saves it to your working folder
-plt.show()  # Shows it in the notebook
+## 📊 Machine Learning Model
 
+This project uses **Linear Regression** to predict land prices based on land area.
 
+### Training Dataset
 
+| Area (sq ft) | Price (₹) |
+| ------------ | --------- |
+| 2600         | 550000    |
+| 3000         | 565000    |
+| 3200         | 610000    |
+| 3600         | 680000    |
+| 4000         | 725000    |
+
+The model learns the relationship using:
+
+```math
+y = mx + b
+```
+
+Where:
+
+* `x` = Area
+* `y` = Predicted Price
+* `m` = Slope
+* `b` = Intercept
+
+---
+
+## 🚀 How to Run the Project
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/pranjal-glitch/land-price-regression-model.git
+```
+
+---
+
+### 2️⃣ Open Project Folder
+
+```bash
+cd land-price-regression-model
+```
+
+---
+
+### 3️⃣ Install Required Libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 4️⃣ Run Streamlit App
+
+```bash
+streamlit run myfile.py
+```
+
+---
+
+## 📈 Graph Visualization
+
+The app dynamically displays:
+
+* Dataset points
+* Regression line
+* Current prediction point
+
+using Matplotlib.
+
+---
+
+## 🧠 Future Improvements
+
+* Add larger datasets
+* Improve UI/UX
+* Add location-based prediction
+* Deploy online using Streamlit Cloud
+* Add advanced ML models
+
+---
+
+## 👨‍💻 Author
+
+**Pranjal Srivastava**
+B.Tech CSE Student | Data Science Enthusiast | ML Learner 🚀
