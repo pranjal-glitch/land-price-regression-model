@@ -12,7 +12,6 @@ A Streamlit-based Machine Learning web application that predicts land prices bas
 * Visualize training data and prediction points
 
 ---
-
 ## 🛠️ Technologies Used
 
 * Python
