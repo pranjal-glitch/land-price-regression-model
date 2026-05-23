@@ -3,7 +3,6 @@
 A Streamlit-based Machine Learning web application that predicts land prices based on area using a **Linear Regression Model**.
 
 ---
-
 ## 📌 Features
 
 * Predict land price instantly
