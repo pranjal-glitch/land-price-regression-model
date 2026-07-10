@@ -80,8 +80,6 @@ git clone https://github.com/pranjal-glitch/land-price-regression-model.git
 cd land-price-regression-model
 ```
 
----
-
 ### 3️⃣ Install Required Libraries
 
 ```bash
